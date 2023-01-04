@@ -9,6 +9,10 @@ function App() {
   });
   // 메뉴의 이름을 입력받는건
   $("#espresso-menu-name").addEventListener("keypress", (e) => {
+    if ($("#espresso-menu-name").value === "") {
+        alert("값을 입력해주세요.");
+        
+    }
     if (e.key === "Enter") {
       const espressoMenuName = $("#espresso-menu-name").value;
       const menuItemTemplate = (espressoMenuName) => {
